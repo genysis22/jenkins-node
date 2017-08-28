@@ -5,17 +5,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- -R tap \"test/*-test.js\"",
+    "test": "istanbul cover tape \"test/*-test.js\"",
     "lint": "eslint index.js",
-    "ci-test": "istanbul cover _mocha -- -R tap \"test/*-test.js\" > test.tap && istanbul report clover",
+    "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover",
     "ci-lint": "eslint -f checkstyle index.js > checkstyle-result.xml"
   },
   "keywords": [],
-  "author": "Eze Onuoha <onuohaeze@gmail.com>",
+  "author": "Marc Harter <wavded@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^4.5.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.5.0"
+    "eslint": "^0.10.2",
+    "istanbul": "^0.3.22",
+    "tape": "^3.6.1"
   }
 }
