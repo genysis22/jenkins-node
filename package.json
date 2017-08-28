@@ -5,13 +5,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover tape \"test/*-test.js\"",
+    "test": "istanbul cover _mocha -- -R tap \"test/*-test.js\"",
     "lint": "eslint index.js",
-    "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover",
+    "ci-test": "istanbul cover _mocha -- -R tap \"test/*-test.js\" > test.tap && istanbul report clover",
     "ci-lint": "eslint -f checkstyle index.js > checkstyle-result.xml"
   },
   "keywords": [],
-  "author": "Marc Harter <wavded@gmail.com>",
+  "author": "Eze Onuoha <onuohaeze@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^0.10.2",
