@@ -5,9 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover tape \"test/*-test.js\"",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha/bin -- -R tap \"test/*-test.js\"",
     "lint": "eslint index.js",
-    "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover",
+    "ci-test": "istanbul cover node_modules/mocha/bin/_mocha/bin -- -R tap \"test/*-test.js\" > test.tap && istanbul report clover",
     "ci-lint": "eslint -f checkstyle index.js > checkstyle-result.xml"
   },
   "keywords": [],
