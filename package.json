@@ -16,7 +16,11 @@
   "devDependencies": {
     "eslint": "^0.10.2",
     "istanbul": "^0.3.22",
+<<<<<<< HEAD
     "mocha": "^3.5.0",
     "tape": "^3.6.1"
+=======
+    "mocha": "^3.5.0"
+>>>>>>> 04e6ef03a4df371b7d55a66779f725a5441ccd3c
   }
 }
