@@ -1,4 +1,3 @@
-
 var toAdd = 23
 function summer (sumVal) {
   return function (toAdd) {
@@ -6,6 +5,5 @@ function summer (sumVal) {
     return sumVal + toAdd    
   }
 }
-
 module.exports = summer
 
