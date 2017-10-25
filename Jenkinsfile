@@ -17,10 +17,9 @@ node {
     hygieiaBuildPublishStep buildStatus: 'Success'
     
     stage 'sonarqube analysis'
-    withSonarQubeEnv {
-        sonar.projectKey=jenkins-node
-        sonar.projectName=jenkins-node
-        sonar.projectVersion=1.0
-        sonar.sources=/var/lib/jenkins/workspace/$JOB_NAME/index.js
-    }  
+    sonar.projectKey=jenkins-node
+    sonar.projectName=jenkins-node
+    sonar.projectVersion=1.0
+    sonar.sources=/var/lib/jenkins/workspace/$JOB_NAME/index.js
+    
 }
