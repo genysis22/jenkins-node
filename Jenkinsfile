@@ -2,6 +2,7 @@ node {
     stage 'checkout'
     checkout scm        
     
+    
     // git 'https://github.com/genysis22/jenkins-node.git'
     
     stage 'build, test'
@@ -11,6 +12,5 @@ node {
     
     stage 'checkstyle analysis report'
     checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
-    
-        
+            
 }
