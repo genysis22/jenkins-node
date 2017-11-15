@@ -1,8 +1,7 @@
 node {
     stage 'checkout'
     checkout scm
-    
-    
+        
    // git 'https://github.com/genysis22/jenkins-node.git'
     
     stage 'build, test'
