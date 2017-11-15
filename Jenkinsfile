@@ -9,6 +9,7 @@ node {
     npm run ci-test || :
     npm run ci-lint || :'''
     
+    
     stage 'checkstyle analysis report'
     checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
             
