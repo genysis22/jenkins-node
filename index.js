@@ -1,5 +1,3 @@
-
-
 var toAdd = 23
 function summer (sumVal) {
   return function (toAdd) {
