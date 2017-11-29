@@ -25,10 +25,10 @@ pipeline {
             }
         }
         stage ('SonarQube Analysis'){
+            def scannerHome = tool 'sonarScanner'
             steps{
-                def scannerHome = tool 'sonarScanner'
                 withSonarQubeEnv('sonarQube'){
-                    sh "${scannerHome}/bin/sonar-scanner -Dsonar.host.url=${SONAR_HOST_URL}  -Dsonar.login=${SONAR_AUTH_TOKEN}  -Dsonar.projectName=new-job -Dsonar.projectVersion=1.0 -Dsonar.projectKey=new-job -Dsonar.sources=index.js"
+                sh "${scannerHome}/bin/sonar-scanner -Dsonar.host.url=${SONAR_HOST_URL}  -Dsonar.login=${SONAR_AUTH_TOKEN}  -Dsonar.projectName=new-job -Dsonar.projectVersion=1.0 -Dsonar.projectKey=new-job -Dsonar.sources=index.js"
                 }
             }
         }
