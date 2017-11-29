@@ -1,7 +1,8 @@
 #!groovy
 import groovy.json.JsonSlurper
-node {
-    
+pipeline {
+    agent any
+    stages{
         stage('checkout'){
             step{
                 checkout scm
@@ -19,7 +20,9 @@ node {
             }
         }
         stage ('checkstyle analysis report'){
-        checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
+            step{
+                checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
+            }
         }
         stage ('SonarQube Analysis'){
             step{
@@ -30,6 +33,7 @@ node {
             }
         }
     }
+}
  
   
   
