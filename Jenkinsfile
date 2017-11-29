@@ -19,9 +19,7 @@ node {
             }
         }
         stage ('checkstyle analysis report'){
-            step{
-                checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
-            }
+        checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
         }
         stage ('SonarQube Analysis'){
             step{
