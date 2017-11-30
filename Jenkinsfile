@@ -3,7 +3,10 @@ import groovy.json.JsonSlurper
 
 pipeline {
     agent any
-    def scannerHome = tool 'sonarScanner'
+    environment {
+     def scannerHome = tool 'sonarScanner'
+   }
+    
     stages{
         stage('checkout'){
             steps{
